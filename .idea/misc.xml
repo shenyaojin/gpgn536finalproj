@@ -3,5 +3,8 @@
   <component name="Black">
     <option name="sdkName" value="C:\ProgramData\Anaconda3" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="C:\ProgramData\Anaconda3" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="/opt/anaconda" project-jdk-type="Python SDK" />
+  <component name="PyCharmDSProjectLayout">
+    <option name="id" value="JupyterRightHiddenStructureLayout" />
+  </component>
 </project>
