@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="Update 11/21">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/gpgn536finalproj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gpgn536finalproj.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marmousi_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theo_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -68,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/opt/anaconda/bin/conda",
+    "last_opened_file_path": "/home/shenyaojin/.cache/JetBrains/DataSpell2023.2/demo/ds/dataspell_demo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,6 +119,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update 11/21" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 11/21" />
+    <MESSAGE value="UPDATE README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE README.md" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
