@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE README.md">
-      <change afterPath="$PROJECT_DIR$/cppimplement/lib/dataio.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cppimplement/lib/pdesolver.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/io.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theo_model_cpp_implement/lib/dataio.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theo_model_cpp_implement/lib/pdesolver.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theo_model_cpp_implement/lib/pdesolver.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theo_model_v2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cppimplement/theo_model_implementation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model_cpp_implement/theo_model_implement.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +118,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update 11/21" />
