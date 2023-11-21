@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gpgn536finalproj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gpgn536finalproj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="Update 11/21">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ex_7.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Ex_7.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marmousi_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theo_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +35,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "shenyaojin"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6a5e6fac-b2d7-4fd1-b124-e71553c280be" />
+        <option name="url" value="https://github.com/shenyaojin/gpgn536finalproj.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -101,5 +115,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update 11/21" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 11/21" />
   </component>
 </project>
