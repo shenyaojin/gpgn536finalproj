@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theo_model_cpp_implement/lib/pdesolver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model_cpp_implement/lib/pdesolver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theo_model_cpp_implement/lib/pdesolver.h" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model_cpp_implement/lib/pdesolver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theo_model_cpp_implement/theo_model_implement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model_cpp_implement/theo_model_implement.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theo_model_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model_v2.py" afterDir="false" />
-    </list>
+    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE C algorithm" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,7 +152,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update 11/21" />
     <MESSAGE value="UPDATE README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE README.md" />
+    <MESSAGE value="UPDATE C algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE C algorithm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
