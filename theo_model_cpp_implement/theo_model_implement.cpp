@@ -8,7 +8,7 @@
 using namespace std;
 // written by Shenyao Jin, shenyaojin@mines.edu, 11/2023
 // part of the final project of GPGN 536
-// the implementation of theo_model_v2.ipynb
+// the implementation of theo_model_v2.ipynb (RTM implement on a theoretical heterogeneous model).
 
 int main() {
     // Define spatial grid
@@ -92,20 +92,20 @@ int main() {
         float ry = 25.0;
         vector<vector<vector<float>>> mmm(nx, vector<vector<float>>(nt, vector<float>(nt, 0.0)));
 
-        for (int it = nt - 1; nt > 0; nt--) {
+        for (int it = nt - 1; it > 0; it--) {
             vector<vector<float>> tmp = awe_2d_heterogeneous_8th_order_data_time_reverse(
                     UUo, UUm, dx, dy, dt, v, data, it, ry
             ); // reverse func
             for (int ix = 0; ix < nx; ix++) {
                 for (int iy = 0; iy < ny; iy++) {
-                    mmm[ix][iy][it] = tmp[ix][iy];
+                    mmm[ix][iy][nt-1-it] = tmp[ix][iy];
                 } //end iy
             } // end ix
             UUm = UUo;
             UUo = tmp;
         } //end it
         // correlation
-        for (int i = 0; i < nx; ++i) {
+        for (int i = 0; i < nx; ++i) { // this loop sucks.
             for (int j = 0; j < ny; ++j) {
                 float sum = 0.0f;
                 for (int k = 0; k < nt; ++k) {
