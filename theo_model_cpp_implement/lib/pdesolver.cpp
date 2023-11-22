@@ -52,7 +52,7 @@ vector<vector<float>> awe_2d_explicit_solver_heterogeneous_8th_order(
     for (int i = 4; i < nx - 4; ++i) {
         for (int j = 4; j < ny - 4; ++j) {
             updatedWavefield[i][j] = 2 * UUo[i][j] - UUm[i][j] +
-                                     dtdx2 * pow(v[i][j], 2) * (
+                                     dtdx2 * v[i][j] * v[i][j] * (
                                              -1 / 560.0  * UUo[i - 4][j]
                                              + 8 / 315.0 * UUo[i - 3][j]
                                              - 1 / 5.0   * UUo[i - 2][j]
@@ -62,16 +62,16 @@ vector<vector<float>> awe_2d_explicit_solver_heterogeneous_8th_order(
                                              - 1 / 5.0   * UUo[i + 2][j]
                                              + 8 / 315.0 * UUo[i + 3][j]
                                              - 1 / 560.0 * UUo[i + 4][j]
-                                     ) + dtdy2 * pow(v[i][j], 2) * (
-                    -1 / 560.0  * UUo[i][j - 4]
-                    + 8 / 315.0 * UUo[i][j - 3]
-                    - 1 / 5.0   * UUo[i][j - 2]
-                    + 8 / 5.0   * UUo[i][j - 1]
-                    - 205 / 72.0* UUo[i][j]
-                    + 8 / 5.0   * UUo[i][j + 1]
-                    - 1 / 5.0   * UUo[i][j + 2]
-                    + 8 / 315.0 * UUo[i][j + 3]
-                    - 1 / 560.0 * UUo[i][j + 4]
+                                     ) + dtdy2 * v[i][j] * v[i][j] * (
+                                            -1 / 560.0  * UUo[i][j - 4]
+                                            + 8 / 315.0 * UUo[i][j - 3]
+                                            - 1 / 5.0   * UUo[i][j - 2]
+                                            + 8 / 5.0   * UUo[i][j - 1]
+                                            - 205 / 72.0* UUo[i][j]
+                                            + 8 / 5.0   * UUo[i][j + 1]
+                                            - 1 / 5.0   * UUo[i][j + 2]
+                                            + 8 / 315.0 * UUo[i][j + 3]
+                                            - 1 / 560.0 * UUo[i][j + 4]
             );
         }
     }

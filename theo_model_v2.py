@@ -9,9 +9,6 @@ dx,dy = Lx/(nx-1),Ly/(ny-1) # . . Discretization intervals
 ## . . Create velocity function
 v = np.zeros((nx,ny))+1500
 v[:,50:]=2000
-
-
-import numpy as np
 def awe_2d_explicit_solver_heterogeneous_8th_order(UUo,UUm,dx,dy,dt,v,F,it,sx,sy):
     '''Set up eight-order solver of the acoustic wave equation
     usage: U=awe_2d_explicit_solver_heterogeneous_8th_order(UUo,UUm,dx,dy,dt,v,F,it,sx,sy):
@@ -140,7 +137,7 @@ UUm = np.zeros((nx,ny))
 CC = 0.5                     # . . Courant #
 nt = 800                     # . . Number of time steps
 dt = CC*dx/np.max(v)         # . . Define dt based on Courant
-t  = np.linspace(0,nt*dt,nt) # . . Time lin
+t  = np.linspace(0,(nt-1)*dt,nt) # . . Time lin
 t0 = 0.05                    # . . Wavelet shift
 
 ## . . Define forcing function

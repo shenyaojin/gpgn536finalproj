@@ -3,8 +3,6 @@
 #include <vector>
 #include <sstream>
 #include <cmath>
-#include <algorithm>
-#include <time.h>
 #include "lib/pdesolver.h"
 
 using namespace std;
@@ -13,58 +11,135 @@ using namespace std;
 // the implementation of theo_model_v2.ipynb
 
 int main() {
-    const string filePath = "../data.txt"; // Change this to the appropriate file path
-
-    vector<vector<float>> model = datareader(filePath);
-
-    // Define parameters
-    int nz = 300, nx = 298;
-    float dz = 5.0, dx = 5.0;
-    float sx = 1000, sy = 800;
-    int nt = 20;
-    float CC = 0.5;
+    // Define spatial grid
+    float Lx = 2000, Ly = 1200;       // lengths (m)
+    int nx = 401, ny = 241;           // Number of points in discretization
+    float dx = Lx / (nx - 1);         // Discretization intervals
+    float dy = Ly / (ny - 1);
 
     // Create velocity function
-    vector<float> max_v = *max_element(model.begin(), model.end());
-    double vmax = 5560.32800;
-    double dt = CC * dx / vmax;
-    // Initialize wavefields
-    vector<vector<float>> UUo(nx, vector<float>(nz, 0.0));
-    vector<vector<float>> UUm(nx, vector<float>(nz, 0.0));
+    vector<vector<float>> v(nx, vector<float>(ny, 1500)); // Initialize the 2D vector with 1500
 
-    // Define time and forcing function
+    // Update part of the velocity function
+    for (int i = 0; i < nx; ++i) {
+        for (int j = 50; j < ny; ++j) {
+            v[i][j] = 2000;
+        }
+    }
+    // Initialize UUo and UUm with zeros
+    vector<vector<float>> UUo(nx, vector<float>(ny, 0));
+    vector<vector<float>> UUm(nx, vector<float>(ny, 0));
+
+    // Time stepping parameters
+    float CC = 0.5;   // Courant number
+    int nt = 800;     // Number of time steps
+    float dt = CC * dx / 2000; // Assuming v is a 1D vector of max velocity values
+
+    // Creating a time vector `t`
     vector<float> t(nt);
+    float t0 = 0.05;
+    float currentTime = 0;
     vector<double> F(nt);
-    float ss = 1;
-
+    float ss = 0.01;
+    // define F and t array.
     for (int i = 0; i < nt; ++i) {
         t[i] = i * dt;
-        F[i] = (1 - ((t[i] - 40 * t[i]) / ss) * ((t[i] - 40 * t[i]) / ss)) * exp(-(t[i] - 40 * t[i]) * (t[i] - 40 * t[i]) / (2 * ss * ss));
+        F[i] = (1 - ((t[i] - t0) / ss) * ((t[i] - t0) / ss))
+                * exp(-(t[i] - t0) * (t[i] - t0) / (2 * ss * ss));
     }
+    int shot_num = 10;
+    float sy = 25;
+    vector<float> sx(shot_num);
+    // define nx
+    float start = 0;
+    float end = nx * dx;
+    float step = (end - start) / (shot_num + 1);
 
-    // Total Solution space
-    vector<vector<vector<float>>> fff(nx, vector<vector<float>>(nz, vector<float>(nt, 0.0)));
+    for (int i = 0; i < shot_num; ++i) {
+        sx[i] = start + step * (i + 1); // Offset by one to mimic Python's [1:-1]
+    }
+    vector<vector<vector<float>>> fff(nx, vector<vector<float>>(nt, vector<float>(nt, 0.0)));
+    vector<vector<float>> img(nx, vector<float>(ny, 0));
+    for (int iter = 0; iter < shot_num; iter++) {
+        for (int it = 0; it < nt; it++) {
+            vector<vector<float>> tmp;
+            tmp = awe_2d_explicit_solver_heterogeneous_8th_order(UUo, UUm, dx, dy, dt, v, F, it, sx[iter], sy);
+            // pass the value:
+            for (int ix = 0; ix < nx; ix++) {
+                for (int iy = 0; iy < ny; iy++) {
+                    fff[ix][iy][it] = tmp[ix][iy];
+                } //end iy
+            } // end ix
+            UUm = UUo;
+            UUo = tmp;
+        } // end it
 
-    // Iterate over solution
-    clockid_t start, end;
-    start = clock();
-    // calculating the wave
-    for (int it = 0; it < nt; ++it) {
-        vector<vector<float>> tmp = awe_2d_explicit_solver_heterogeneous_8th_order(UUo, UUm, dx, dz, dt, model, F, it, sx, sy);
-        for (int j = 0; j < nx; ++j) {
-            for (int k = 0; k < nz; ++k) {
-                fff[j][k][it] = tmp[j][k];
-                //UUm[j][k] = UUo[j][k];
-                //UUo[j][k] = tmp[j][k];
+        // int wavefield value (reverse)
+        UUo.clear(); // Clear the entire 2D vector
+        UUo.resize(nx, vector<float>(ny, 0.0f)); // Resize and initialize with zeros
+        UUm.clear();
+        UUm.resize(nx, vector<float>(ny, 0.0f));
+
+        // process data = fff[:,5,:]
+        vector<vector<float>> data(nx, vector<float>(nt, 0.0)); // This will store the slice
+        for (int i = 0; i < nx; ++i) {
+            for (int k = 0; k < nt; ++k) {
+                data[i][k] = fff[i][5][k]; // Copying the relevant elements
             }
         }
-        UUm = UUo;
-        UUo = tmp;
-    }
-    end = clock();
-    cout<<"Time Used "<<(double)(end-start)/CLOCKS_PER_SEC<<endl;
 
-    // IO
+        // ry: source location
+        float ry = 25.0;
+        vector<vector<vector<float>>> mmm(nx, vector<vector<float>>(nt, vector<float>(nt, 0.0)));
+
+        for (int it = nt - 1; nt > 0; nt--) {
+            vector<vector<float>> tmp = awe_2d_heterogeneous_8th_order_data_time_reverse(
+                    UUo, UUm, dx, dy, dt, v, data, it, ry
+            ); // reverse func
+            for (int ix = 0; ix < nx; ix++) {
+                for (int iy = 0; iy < ny; iy++) {
+                    mmm[ix][iy][it] = tmp[ix][iy];
+                } //end iy
+            } // end ix
+            UUm = UUo;
+            UUo = tmp;
+        } //end it
+        // correlation
+        for (int i = 0; i < nx; ++i) {
+            for (int j = 0; j < ny; ++j) {
+                float sum = 0.0f;
+                for (int k = 0; k < nt; ++k) {
+                    int rev_k = nt - 1 - k;
+                    sum += fff[i][j][k] * mmm[i][j][rev_k];
+                }
+                img[i][j] += sum; // Add the sum to img
+            } //end j
+        } // end i (img gen)
+    } //end iter/shot_num
+    //write img array to file
+    ofstream outFile("rtm_theo_model.txt");
+
+    // Check if the file is open
+    if (!outFile.is_open()) {
+        cerr << "Error opening file for writing." << endl;
+        return 1; // Exit the program with an error code
+    }
+
+    // Iterate over the img array and write each element to the file
+    for (int i = 0; i < img.size(); ++i) {
+        for (int j = 0; j < img[i].size(); ++j) {
+            outFile << img[i][j] << " ";
+        }
+        outFile << "\n"; // New line at the end of each row
+    }
+
+    // Close the file stream
+    outFile.close();
+
+    return 0;
+} // end main func
+/*
+ *     // IO
     for (int t = 0; t < nt; t++){
         string filename = "time_step" + to_string(t) + ".txt";
         ofstream outfile;
@@ -80,5 +155,4 @@ int main() {
     }
 
     return 0;
-
-}
+ */
