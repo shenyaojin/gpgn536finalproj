@@ -1,4 +1,4 @@
-# Install script for directory: /home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/theo_model_cpp_implement
+# Install script for directory: /home/shenyaojin/Documents/2023/gpgn536/final_proj/test/gpgn536finalproj/theo_model_cpp_implement
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/theo_model_cpp_implement/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/shenyaojin/Documents/2023/gpgn536/final_proj/test/gpgn536finalproj/theo_model_cpp_implement/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

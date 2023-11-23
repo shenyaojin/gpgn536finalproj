@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/theo_model_cpp_implement/. -I/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/theo_model_cpp_implement/lib
+CXX_INCLUDES = -I/home/shenyaojin/Documents/2023/gpgn536/final_proj/test/gpgn536finalproj/theo_model_cpp_implement/. -I/home/shenyaojin/Documents/2023/gpgn536/final_proj/test/gpgn536finalproj/theo_model_cpp_implement/lib
 
 CXX_FLAGS = -std=gnu++14
 
