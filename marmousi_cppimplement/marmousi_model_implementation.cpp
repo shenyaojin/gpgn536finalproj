@@ -1,9 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <sstream>
 #include <cmath>
-#include <algorithm>
 #include <time.h>
 #include "lib/pdesolver.h"
 
@@ -124,10 +122,11 @@ int main() {
                 img[i][j] += sum; // Add the sum to img
             } //end j
         } // end i (img gen)
+
     } // end shot number
 
     //write img array to file
-    ofstream outFile("rtm_theo_model.txt");
+    ofstream outFile("rtm_marmousi_model.txt");
 
     // Check if the file is open
     if (!outFile.is_open()) {
