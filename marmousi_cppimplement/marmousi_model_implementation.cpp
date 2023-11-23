@@ -97,11 +97,55 @@ int main() {
         }
         // define the observation location.
         float rz = 25.0;
-        vector<vector<vector<float>>> mmm(nx, vector<vector<float>>(nt, vector<float>(nt, 0.0)));
+        vector<vector<vector<float>>> mmm(nx, vector<vector<float>>(nz, vector<float>(nt, 0.0)));
+        // size of mmm[nx, nz, nt]
+        for (int it = nt - 1; it > 0; it--) {
+            vector<vector<float>> tmp =
+                    awe_2d_heterogeneous_8th_order_data_time_reverse(
+                            UUo, UUm, dx, dz, dt, v, data, it, rz
+                            );
+            for (int ix = 0; ix < nx; ix++) {
+                for (int iy = 0; iy < nz; iy++) {
+                    mmm[ix][iy][nt-1-it] = tmp[ix][iy];
+                } //end iy
+            } // end ix
+            UUm = UUo;
+            UUo = tmp;
+        } //end it
 
-
-
+        // correlation
+        for (int i = 0; i < nx; ++i) { // this loop sucks.
+            for (int j = 0; j < nz; ++j) {
+                float sum = 0.0f;
+                for (int k = 0; k < nt; ++k) {
+                    int rev_k = nt - 1 - k;
+                    sum += fff[i][j][k] * mmm[i][j][rev_k];
+                }
+                img[i][j] += sum; // Add the sum to img
+            } //end j
+        } // end i (img gen)
     } // end shot number
+
+    //write img array to file
+    ofstream outFile("rtm_theo_model.txt");
+
+    // Check if the file is open
+    if (!outFile.is_open()) {
+        cerr << "Error opening file for writing." << endl;
+        return 1; // Exit the program with an error code
+    }
+
+    // Iterate over the img array and write each element to the file
+    for (int i = 0; i < img.size(); ++i) {
+        for (int j = 0; j < img[i].size(); ++j) {
+            outFile << img[i][j] << " ";
+        }
+        outFile << "\n"; // New line at the end of each row
+    }
+
+    // Close the file stream
+    outFile.close();
+
     return 0;
 
 }

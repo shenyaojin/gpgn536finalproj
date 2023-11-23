@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE theo model C++ version">
-      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/cache-v2-1fbd04c59ffa26792f05.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-124cc18b5ff349882bed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-105ca1ae673891b06c19.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-23T00-19-39-0058.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marmousi_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cppimplement/lib/dataio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/lib/dataio.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cppimplement/lib/pdesolver.h" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theo_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theo_model_cpp_implement/theo_model_implement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model_cpp_implement/theo_model_implement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/lib/pdesolver.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/lib/pdesolver.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/marmousi_model_implementation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/marmousi_model_implementation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/cppimplement" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/cppimplement" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.h" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/marmousi_model_implementation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/marmousi_model_implementation.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +140,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/marmousi_model.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -204,13 +201,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/marmousi_model.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/marmousi_model.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="5" />
+          <line>34</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
