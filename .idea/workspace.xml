@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE theo model C++ version">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/lib/pdesolver.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/lib/pdesolver.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/marmousi_model_implementation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir/marmousi_model_implementation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/cppimplement" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/cppimplement" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marmousi_cppimplement/marmousi_model_implementation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/marmousi_model_implementation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
