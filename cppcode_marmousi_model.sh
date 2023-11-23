@@ -46,7 +46,7 @@ oz,ox = 0.0,0.0
 z = np.linspace(0,(nz-1)*dz,nz)
 x = np.linspace(0,(nx-1)*dx,nx)
 Lz, Lx = nz * dz, nx * dx
-
+cx = np.array((-1,1))
 plt.figure()
 plt.imshow(marmousimodel.T, aspect='auto',cmap='jet',extent=[0,Lx,Lz,0])
 plt.clim(cx * 1e-15)

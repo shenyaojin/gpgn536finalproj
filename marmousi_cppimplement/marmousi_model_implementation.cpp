@@ -35,7 +35,7 @@ int main() {
     vector<vector<float>> UUm(nx, vector<float>(nz, 0));
 
     float CC = 0.5;
-    int nt  = 2500;
+    int nt  = 5000;
     float v_max = 5560.328;
     double dt = CC * dx / v_max;
 
