@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE C algorithm">
+    <list default="true" id="4c39153e-5716-4c5c-9075-8398f391571b" name="Changes" comment="UPDATE theo model C++ version">
+      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/cache-v2-1fbd04c59ffa26792f05.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-124cc18b5ff349882bed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-105ca1ae673891b06c19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marmousi_cppimplement/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-23T00-19-39-0058.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marmousi_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cppimplement/lib/dataio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/lib/dataio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cppimplement/lib/pdesolver.h" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_cppimplement/lib/pdesolver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marmousi_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/marmousi_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theo_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theo_model_cpp_implement/theo_model_implement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/theo_model_cpp_implement/theo_model_implement.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +87,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.Theo model">
+  <component name="RunManager" selected="Python.marmousi_model">
     <configuration name="IO" type="PythonConfigurationType" factoryName="Python">
       <module name="gpgn536finalproj" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,10 +129,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="marmousi_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gpgn536finalproj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/marmousi_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.IO" />
       <item itemvalue="Python.Theo model" />
+      <item itemvalue="Python.marmousi_model" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.marmousi_model" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -153,7 +191,8 @@
     <MESSAGE value="Update 11/21" />
     <MESSAGE value="UPDATE README.md" />
     <MESSAGE value="UPDATE C algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE C algorithm" />
+    <MESSAGE value="UPDATE theo model C++ version" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE theo model C++ version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -162,6 +201,16 @@
           <url>file://$PROJECT_DIR$/theo_model_v2.py</url>
           <line>195</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/marmousi_model.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/marmousi_model.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

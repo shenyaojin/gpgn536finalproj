@@ -90,7 +90,7 @@ int main() {
 
         // ry: source location
         float ry = 25.0;
-        vector<vector<vector<float>>> mmm(nx, vector<vector<float>>(nt, vector<float>(nt, 0.0)));
+        vector<vector<vector<float>>> mmm(nx, vector<vector<float>>(ny, vector<float>(nt, 0.0)));
 
         for (int it = nt - 1; it > 0; it--) {
             vector<vector<float>> tmp = awe_2d_heterogeneous_8th_order_data_time_reverse(

@@ -1,0 +1,3 @@
+/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/marmousi_cppimplement/cmake-build-debug/CMakeFiles/cppimplement.dir
+/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/marmousi_cppimplement/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/marmousi_cppimplement/cmake-build-debug/CMakeFiles/rebuild_cache.dir

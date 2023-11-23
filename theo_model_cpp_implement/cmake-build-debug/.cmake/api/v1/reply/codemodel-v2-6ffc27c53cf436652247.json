@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "theo_model_cpp_implement",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "theo_model_cpp_implement::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-theo_model_cpp_implement-Debug-8aef0ee971c353d5e037.json",
+					"name" : "theo_model_cpp_implement",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/theo_model_cpp_implement/cmake-build-debug",
+		"source" : "/home/shenyaojin/Documents/2023/gpgn536/final_proj/gpgn536finalproj/theo_model_cpp_implement"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
