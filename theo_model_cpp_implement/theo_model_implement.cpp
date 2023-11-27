@@ -3,6 +3,8 @@
 #include <vector>
 #include <sstream>
 #include <cmath>
+#include <omp.h>
+
 #include "lib/pdesolver.h"
 
 using namespace std;
@@ -54,12 +56,13 @@ int main() {
     float start = 0;
     float end = nx * dx;
     float step = (end - start) / (shot_num + 1);
-
+   
     for (int i = 0; i < shot_num; ++i) {
         sx[i] = start + step * (i + 1); // Offset by one to mimic Python's [1:-1]
     }
     vector<vector<vector<float>>> fff(nx, vector<vector<float>>(nt, vector<float>(nt, 0.0)));
     vector<vector<float>> img(nx, vector<float>(ny, 0));
+    #pragma omp parallel for
     for (int iter = 0; iter < shot_num; iter++) {
         for (int it = 0; it < nt; it++) {
             vector<vector<float>> tmp;

@@ -4,6 +4,7 @@
 #include <cmath>
 #include <time.h>
 #include "lib/pdesolver.h"
+#include <omp.h>
 
 using namespace std;
 // written by Shenyao Jin, shenyaojin@mines.edu, 11/2023
@@ -67,6 +68,7 @@ int main() {
     vector<vector<vector<float>>> fff(nx, vector<vector<float>>(nt, vector<float>(nt, 0.0)));
     // image: img;
     vector<vector<float>> img(nx, vector<float>(nz, 0));
+    #pragma omp parallel for
     for (int iter = 0; iter < shot_num; iter++) {
         for (int it = 0; it < nt; it++) {
             vector<vector<float>> tmp;
